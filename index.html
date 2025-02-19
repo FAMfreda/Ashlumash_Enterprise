@@ -1,55 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon | Your Project Name</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashlumash Enterprise - Recycled Art & Decorations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Coming <span class="highlight">Soon</span></h1>
-    <p>We're working hard to bring you something amazing. Stay tuned!</p>
-    
-    <div class="countdown">
-      <div class="countdown-item">
-        <div id="days" class="countdown-number">00</div>
-        <div class="countdown-label">Days</div>
-      </div>
-      <div class="countdown-item">
-        <div id="hours" class="countdown-number">00</div>
-        <div class="countdown-label">Hours</div>
-      </div>
-      <div class="countdown-item">
-        <div id="minutes" class="countdown-number">00</div>
-        <div class="countdown-label">Minutes</div>
-      </div>
-      <div class="countdown-item">
-        <div id="seconds" class="countdown-number">00</div>
-        <div class="countdown-label">Seconds</div>
-      </div>
-    </div>
-    
-    <div class="signup-form">
-      <h2>Get Notified When We Launch</h2>
-      <p>Be the first to know when we go live.</p>
-      <form id="notify-form">
-        <input type="email" id="email" placeholder="Enter your email" required>
-        <button type="submit">Notify Me</button>
-      </form>
-      <div id="success-message" class="success-message">Thank you! We'll notify you when we launch.</div>
-      <div id="error-message" class="error-message">Please enter a valid email address.</div>
-    </div>
-    
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-  
-  <script src="script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">Ashlumash Enterprise</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforming Waste into Beauty</h1>
+            <p>Handcrafted wall decorations and flowerpots made from recycled materials</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn primary-btn">View Our Creations</a>
+                <a href="#about" class="btn secondary-btn">Learn Our Story <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-product">
+        <div class="container">
+            <h2>About Our Products</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="/api/placeholder/500/350" alt="Recycled products display">
+                </div>
+                <div class="about-text">
+                    <h3>Sustainable Art from Rural Ghana</h3>
+                    <p>At Ashlumash Enterprise, we transform discarded water bottles, rubber, polythene, and plastic spoons into beautiful wall decorations and flowerpots.</p>
+                    <p>Each piece is carefully crafted by hand in our workshop in Asunafo North, Ahafo Region, bringing new life to materials that would otherwise pollute our environment.</p>
+                    <a href="#services" class="text-link">Explore our creations <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-innovator">
+        <div class="container">
+            <h2>Meet the Innovator</h2>
+            <div class="innovator-grid">
+                <div class="innovator-text">
+                    <h3>From Challenge to Opportunity</h3>
+                    <p>Ashlumash Enterprise was founded by a determined woman who didn't let physical challenges stop her from making a difference. Born and raised in rural Ahafo Region, she saw the growing problem of plastic waste in her community and decided to take action.</p>
+                    <p>Through creativity and perseverance, she developed techniques to transform waste materials into beautiful decorative items, creating both environmental impact and economic opportunity in her rural community.</p>
+                    <blockquote>"Every discarded bottle has potential. I see beauty where others see trash."</blockquote>
+                </div>
+                <div class="innovator-image">
+                    <img src="/api/placeholder/500/350" alt="Workshop image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="product-showcase">
+        <div class="container">
+            <h2>Our Creations</h2>
+            <p class="section-intro">Each piece is unique, handcrafted from materials collected in our community</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/300" alt="Wall decoration">
+                    </div>
+                    <h3>Wall Decorations</h3>
+                    <p>Colorful artistic pieces that bring life to any room</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/300" alt="Flower pot">
+                    </div>
+                    <h3>Flowerpots</h3>
+                    <p>Durable and attractive planters for indoor and outdoor use</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/300" alt="Event decoration">
+                    </div>
+                    <h3>Event Decorations</h3>
+                    <p>Custom pieces for making your special occasions memorable</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/300" alt="Custom orders">
+                    </div>
+                    <h3>Custom Orders</h3>
+                    <p>Bespoke creations designed to your specifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Asunafo North, Ahafo Region, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233123456789</li>
+                        <li><i class="fas fa-envelope"></i> info@ashlumashenterprise.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Ashlumash Enterprise</h3>
+                    <p>Transforming waste into beautiful decorative products while creating sustainable impact in rural Ghana.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-resources">
+                    <h4>Additional Resources</h4>
+                    <ul>
+                        <li><a href="#">Recycling Tips</a></li>
+                        <li><a href="#">Sustainability Blog</a></li>
+                        <li><a href="#">Community Initiatives</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@ashlumashenterprise.com</p>
+                    <p><i class="fas fa-phone"></i> +233123456789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Ashlumash Enterprise. All rights reserved. 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
