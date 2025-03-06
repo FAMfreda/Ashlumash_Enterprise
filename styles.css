@@ -108,18 +108,21 @@ section {
 
 .primary-btn:hover {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
 }
 
 .secondary-btn {
     background-color: transparent;
-    color: var(--dark-color);
-    border: 2px solid var(--dark-color);
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
 }
 
 .secondary-btn:hover {
     background-color: var(--dark-color);
     color: white;
+    border: 2px solid var(--dark-color) white;
+
 }
 
 /* Navigation */
@@ -176,35 +179,93 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1920/1080');
+    background-image: url("/images/waste\ bin.jpg"); 
     background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
-    padding: 10rem 0;
-    min-height: 100vh;
+    background-repeat: no-repeat;
+    height: 100vh; 
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: flex-start; 
+    padding-left: 5%; 
+    color: white; 
+  }
+  
+  .hero-content {
+    max-width: 600px; 
+    background: rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    border-radius: 10px;
+    transform: translateX(-100%); 
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+  }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
+  /* Heading animation */
+  .hero-content h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+  }
+  
+  /* Paragraph animation */
+  .hero-content p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.6s;
+  }
+  
+  /* Buttons animation */
+  .hero-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.9s;
+  }
+  
+  /* Button hover effect */
+  .btn {
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Animation keyframes */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 
 .hero h1 {
     font-size: 3.5rem;
     color: white;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons {
@@ -215,8 +276,23 @@ nav {
 }
 
 .hero-buttons .btn {
-    margin: 0.5rem;
+    margin: 0.2rem;
 }
+
+/* Hero-testing */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* About Product Section */
 .about-grid, .innovator-grid {
@@ -352,7 +428,7 @@ blockquote {
     width: 40px;
     height: 40px;
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(185, 76, 76);
     border-radius: 50%;
     transition: all 0.3s ease;
 }
@@ -430,6 +506,79 @@ footer ul li {
     padding-top: 1.5rem;
     text-align: center;
     font-size: 0.9rem;
+}
+
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease;
+    padding-bottom: 60px; /* Make space for the button */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product price styling */
+.product-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #4a8f29;
+    margin: 8px 0 12px 0;
+    text-align: center;
+}
+
+/* Buy Now button styling */
+.buy-now-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4a8f29;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;
+    max-width: 150px;
+}
+
+.buy-now-btn:hover {
+    background-color: #3a7220;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-now-btn:active {
+    transform: translateX(-50%) scale(0.98);
+}
+
+/* Responsive adjustments for the new products and buttons */
+@media (max-width: 768px) {
+    .product-card {
+        padding-bottom: 50px;
+    }
+    
+    .product-price {
+        font-size: 1rem;
+        margin: 6px 0 10px 0;
+    }
+    
+    .buy-now-btn {
+        bottom: 15px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
 }
 
 /* Responsive Styles */
