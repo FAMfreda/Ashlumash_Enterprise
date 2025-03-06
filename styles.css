@@ -279,19 +279,6 @@ nav {
     margin: 0.2rem;
 }
 
-/* Hero-testing */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* About Product Section */
@@ -427,8 +414,8 @@ blockquote {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--primary-color);
-    color: rgb(185, 76, 76);
+    color: var(--light-color);
+    /* background-color: var(--primary-color); */
     border-radius: 50%;
     transition: all 0.3s ease;
 }
@@ -436,6 +423,7 @@ blockquote {
 .social-links a:hover {
     background-color: var(--accent-color);
     transform: translateY(-3px);
+  
 }
 
 .form-group {
